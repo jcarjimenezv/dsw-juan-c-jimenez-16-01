@@ -1,29 +1,226 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Media Queris</title>
 </head>
-<style>
-    * {
-        text-align: center;
-        background-color: blueviolet;
-        color: white;
-    }
-</style>
-<body>
-    <h1>Bienvenido a mi sitio WEB</h1>
-    <h2> Proyecto de sitios web 2023 periodo 16-01</h2>
-    <hr>
-    <h3>Nombre: Juan Carlos Jimenez Vargas</h3>
-    <h3>Programa: Ingeniería de sistemas</h3>
-    <h3>Fecha de creación: Febrero 11 de 2023</h3>
-    <hr>
-    <p>Mis datos de contacto son: <br>
-        Skype: jcarjimenez <br>
-        Telefono: 3213252680 <br>
-        Email: jjimenezv24@gmail.com <br>
-    </p>
-    
+
+<body style="margin: 1%;">
+    <nav style="position: fixed;top:0; z-index: 1; margin-bottom: 2rem; width: 98%;">
+        <ul>
+            <a href="index.html">Inicio</a>
+            <a href="#media">Media Queries</a>
+            <a href="#mockup">Mockup</a>
+        </ul>
+    </nav>
+    <header style="display: grid; grid-template-rows: 1; align-content: center; height: auto; margin-top: 2rem;">
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p style="text-align: justify; font-size: x-large; color: rgba(63, 38, 77, 0.996);">
+                    En desarrollo web, las media queries son un módulo CSS3 que permite adaptar la representación del
+                    contenido a características del dispositivo como la resolución de pantalla (por ejemplo, un
+                    smartphone frente a pantallas de alta definición) o la presencia de características de accesibilidad
+                    como el braille. Se convirtió en un estándar recomendado por la W3C en junio de 2012 y es un
+                    principio básico de la tecnología de Diseño web adaptativo.</p>
+                <p style="text-align: justify; font-size: x-large; color: rgba(63, 38, 77, 0.996);">
+                    Las media queries se esbozaron por primera vez en la propuesta inicial de CSS de Håkon Wium Lie en
+                    1994, pero no se convirtió en parte de CSS1. La recomendación HTML4 de 1997 muestra un ejemplo de
+                    como podría agregarse en el futuro. En el 2000, la W3C comenzó a trabajar en las media queries y
+                    también en otro esquema para el soporte de varios dispositivos: CC/PP. Las 2 acciones estaban
+                    orientadas al mismo problema, pero CC/PP es centrado en el servidor, mientras los Media Queries
+                    están centrados en el cliente. El primer borrador público para Medias Queries fue publicado en
+                    2001, y la especificación se convirtió en una recomendación de la W3C en 2012 después que los
+                    navegadores le dieran soporte.
+                </p>
+            </div>
+
+        </div>
+        <div id="myModal1" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close1">&times;</span>
+                <p style="text-align: justify; font-size: x-large; color: rgba(63, 38, 77, 0.996);">
+                    Así pues, el tipo de medio (media type) podría ser: un smartphone, una tableta, una impresora o un
+                    TV; y las características de los medios pueden determinarse como la orientación de la pantalla, la
+                    resolución, la altura, la anchura o los colores. Como resultado, se pueden utilizar para consultar
+                    los elementos de medio y sus características y para establecer breakpoints.</p>
+                <p style="text-align: justify; font-size: x-large; color: rgba(63, 38, 77, 0.996);">
+                    Los valores más comunes utilizados en los tipos de medios son "screen" para pantallas de desktops,
+                    tabletas y smartphones; "print" para controlar la salida de impresión de un sitio web y "speech"
+                    para la salida en un lector de pantalla que lee el contenido en voz alta.
+                </p>
+            </div>
+
+        </div>
+        <div style="text-align: center; position: relative;">
+            <img src="images/media_banner.png" alt="unad" style="opacity: 0.3;" width="100%" height="93%" />
+
+            <h1 style="position: absolute; top: 40%; left: 5%; color: rgba(103, 30, 142, 0.996);">
+                Aprendamos de Media Queries
+            </h1>
+
+            <p
+                style="position: absolute; top: 50%; left: 5%; right: 10%; text-align: justify; font-size: x-large; color: rgba(63, 38, 77, 0.996);">
+                Son reglas que se introducen en una hoja de estilos CSS (Cascading Style Sheets) las cuales tienen
+                como objetivo definir propiedades específicas para diferentes tipos de medios (dispositivos) sean
+                pantallas de computador, impresoras o telefonos moviles.</p>
+
+            <button id="myBtn"
+                style="position: absolute; top: 70%; left: 5%; width: 10%; text-align: center; font-size: large; color: rgba(221, 204, 231, 0.996); background: rgba(103, 30, 142, 0.996);">Ver
+                mas</button>
+        </div>
+    </header>
+
+    <div style="display: grid; grid-template-rows: repeat(2, 1fr); gap: 1rem;">
+        <section id="media" style="height: 100vh;">
+            <div style="margin-top: 1rem; display: grid; grid-template-columns: repeat(3, 0.75fr); position: relative;">
+                <div class="card" style="padding: 1rem; text-align: center;">
+                    <img src="images/media.png" width="100%" height="55%">
+                    <div class="card-body">
+                        <h3 class="card-title">Para que sirven</h3>
+                        <p class="card-text">Se encargan de que la respuesta enviada a un navegador cliente contenga el
+                            tipo de visualización correcta según la página web, basándose en las propiedades inherentes
+                            al dispositivo en el que se ejecuta.
+                            De este modo, antes de que una página web sea cargada y mostrada a los y las navegantes por
+                            un navegador, la información relacionada con los medios se recupera a través de las media
+                            queries.
+                        </p>
+                    </div>
+                </div>
+                <div class="card" style="padding: 1rem; text-align: center;">
+                    <img src="images/media-queries-1.png" width="100%" height="55%" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Como funcionan</h3>
+                        <p class="card-text">Están conformadas por un tipo de medio (opcional) y una o más expresiones
+                            conocidas como características de medios. Asimismo, se pueden combinar múltiples media
+                            queries mediante operadores lógicos.
+                            En este sentido, las media queries se especifican mediante: "@media" y asignando un bloque
+                            CSS a una página únicamente si se cumplen las condiciones que se muestran a continuación.
+                        </p>
+                        <button id="myBtn1"
+                            style="border-radius: 8px; position: absolute; top: 94%; left: 60%; width: 5%; height: 5%; text-align: center; font-size: small; color: rgba(221, 204, 231, 0.996); background: rgba(103, 30, 142, 0.996);">Ver
+                            mas</button>
+                    </div>
+                </div>
+                <div class="card" style="padding: 1rem; text-align: center;">
+                    <img src="images/screen-with-different-sizes.avif" width="100%" height="55%" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Ejemplos</h3>
+                        <div style="text-align: justify;">
+                            <p class="card-text" style="margin-bottom: -5%; font-size: medium;">Se necesita ajustar la
+                                altura del logotipo,
+                                para que aparezca correctamente, a partir de
+                                un ancho de 768px.</p>
+                            <code>
+                                @media screen and (min-width:768px) {
+                                .logo {
+                                width:120px;
+                                height:auto;
+                                }
+                                }</code>
+                            <p class="card-text" style="margin-bottom: -5%; font-size: medium;">Separar los enlaces que
+                                hay en el footer entre ciertas resoluciones.</p>
+                            <code>
+                                @media screen and (min-width:1023px) and (max-width:1279px) {
+                                    #footer a {
+                                        padding-bottom:10px
+                                    }
+                                }
+                        </code>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mockup" style="height: 100vh;">
+            <div class="card"
+                style="width: 90%; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; margin-top: -5rem; margin-left: 5rem; display: grid; grid-template-rows: repeat(1, 1fr); position: relative;">
+                <div class="card-body" style="text-align: center;">
+                    <img src="images/Website_Mockup.png" alt="" width="30%">
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <div style="display: grid; grid-template-columns: 2; background-color:  rgb(6, 55, 97); text-align: center;">
+        <footer>
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p style="color: aliceblue;">Copyright 2023 All Right Reserved By Juan Carlos Jimenez
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
+        // Get the modal
+        var modal = document.getElementById("myModal1");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn1");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close1")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
+
 </html>
